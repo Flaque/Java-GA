@@ -35,8 +35,16 @@ public class Chromosome
 
  public char GetGene(int index)
     {
+	 	
         return CH_gene[index];
     }
+ 
+ public int GetGeneIndex(char gene) {
+	 for (int i = 0; i < CH_numGenes; i++) {
+		 if (CH_gene[i] == gene) return i;
+	 }
+	 return -1;
+ }
 
  public void DisplayGenes()
     {

@@ -3,8 +3,8 @@ import java.lang.*;
 
 public class Mate
 {
- private    Chromosome MT_father, MT_mother, MT_child1, MT_child2;
- private    int MT_posChild1, MT_posChild2, MT_posLastChild,MT_posFather, MT_posMother,
+ protected    Chromosome MT_father, MT_mother, MT_child1, MT_child2;
+ protected    int MT_posChild1, MT_posChild2, MT_posLastChild,MT_posFather, MT_posMother,
              MT_numGenes, MT_numChromes;
 
  public Mate(ArrayList<Chromosome> population, int numGenes, int numChromes)

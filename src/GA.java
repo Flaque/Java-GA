@@ -112,7 +112,7 @@ public abstract class GA extends Object
             
             int geneMut = rnum.nextInt(GA_numGenes); //pos of mutated gene
             
-            char newGene = (char) (rnum.nextInt(26) + 97); //97 is the value 'a' 
+            char newGene = (char) (rnum.nextInt(8) + 97); //97 is the value 'a' 
             
             Chromosome newChromosome = GA_pop.remove(chromMut); //get chromosome
             
@@ -134,7 +134,7 @@ public abstract class GA extends Object
             
             for (int j = 0; j < GA_numGenes; j++)
                 { 
-                    letter = (char) (rnum.nextInt(26) + 97); //97 is the value 'a'  
+                    letter = (char) (rnum.nextInt(8) + 97); //97 is the value 'a'  
                     Chrom.SetGene(j,letter);
                 }
             Chrom.SetCost(0);
@@ -154,7 +154,7 @@ public abstract class GA extends Object
 
         while (iterationCt < GA_numIterations)
             {
-                Mate mate = new Mate(GA_pop,GA_numGenes,GA_numChromes);
+                PMXMating mate = new PMXMating(GA_pop,GA_numGenes,GA_numChromes);
                 GA_pop = mate.Crossover(GA_pop,numPairs);
                 Mutate();
                 
